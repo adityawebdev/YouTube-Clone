@@ -2,7 +2,7 @@ const Video = ({ video }) => {
   if (!video)
     return (
       <div className="flex justify-center items-center mx-4 my-4 md:mx-10 md:mt-32">
-        <p className="text-white font-black text-6xl">
+        <p className="text-gray-300 font-black text-6xl">
           Watch Youtube videos ads-free with a single search 😎
         </p>
       </div>

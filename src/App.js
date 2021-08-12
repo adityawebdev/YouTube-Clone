@@ -10,7 +10,7 @@ const App = () => {
     const response = await youtube.get("search", {
       params: {
         part: "snippet",
-        maxResults: 50,
+        maxResults: 100,
         key: "AIzaSyCDI2Fq_bvnwLfaSbYz6zcRTmwcoVgotak",
         q: searchTerm,
       },
@@ -21,6 +21,7 @@ const App = () => {
   };
   const onVideoSelect = (video) => {
     setSelectedVideo(video);
+    window.scrollTo(0, 0);
   };
   return (
     <div className="flex-col">
@@ -28,7 +29,7 @@ const App = () => {
         <p className="text-white font-black text-5xl mb-2">MeTube</p>
         <SearchBar onFormSubmit={handleSubmit} />
       </div>
-      <div>
+      <div className="">
         <Video video={selectedVideo} />
       </div>
       <VideoList videos={videos} onVideoSelect={onVideoSelect} />
